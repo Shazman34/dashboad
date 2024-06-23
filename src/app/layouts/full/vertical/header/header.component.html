@@ -1,6 +1,5 @@
-<mat-toolbar class="topbar">
-  <!-- --------------------------------------------------------------- -->
-  <!-- Desktop Menu -->
+<!-- <mat-toolbar class="topbar">
+
   <button
     mat-icon-button
     (click)="toggleCollapsed.emit()"
@@ -10,7 +9,7 @@
     <i-tabler name="menu-2" class="icon-20 d-flex"></i-tabler>
   </button> 
 
-  <!-- Mobile Menu -->
+
   <button
     mat-icon-button
     (click)="toggleMobileNav.emit()"
@@ -19,11 +18,7 @@
   >
     <i-tabler name="menu-2" class="icon-20 d-flex"></i-tabler>
   </button>
-  <!-- --------------------------------------------------------------- -->
 
-  <!-- --------------------------------------------------------------- -->
-  <!--  Search -->
-  <!-- --------------------------------------------------------------- -->
   <button
     mat-icon-button
     (click)="openDialog()"
@@ -33,9 +28,7 @@
   </button>
 
   <div class="d-none d-lg-flex">
-    <!-- --------------------------------------------------------------- -->
-    <!--  Links -->
-    <!-- --------------------------------------------------------------- -->
+
     <button
       mat-button
       [matMenuTriggerFor]="appsmenu"
@@ -117,7 +110,7 @@
 
   <span class="flex-1-auto"></span>
 
-  <!-- Mobile Menu -->
+
   <button
     mat-icon-button
     (click)="toggleMobileFilterNav.emit()"
@@ -126,9 +119,7 @@
     <i-tabler name="grid-dots" class="icon-20 d-flex"></i-tabler>
   </button>
 
-  <!-- --------------------------------------------------------------- -->
-  <!-- langugage Dropdown -->
-  <!-- --------------------------------------------------------------- -->
+
   <button [matMenuTriggerFor]="flags" mat-icon-button class="m-r-5">
     <img
       [src]="selectedLanguage.icon"
@@ -151,9 +142,7 @@
     </button>
   </mat-menu>
 
-  <!-- --------------------------------------------------------------- -->
-  <!-- Notification Dropdown -->
-  <!-- --------------------------------------------------------------- -->
+
   <button
     mat-icon-button
     [matMenuTriggerFor]="notificationmenu"
@@ -197,9 +186,7 @@
     </div>
   </mat-menu>
 
-  <!-- --------------------------------------------------------------- -->
-  <!-- profile Dropdown -->
-  <!-- --------------------------------------------------------------- -->
+ 
   <button
     mat-icon-button
     [matMenuTriggerFor]="profilemenu"
@@ -260,7 +247,7 @@
           </div>
         </a>
 
-        <!-- upgrade -->
+      
         <div
           class="p-24 overflow-hidden bg-light-primary rounded position-relative m-y-16"
         >
@@ -294,4 +281,4 @@
       </div>
     </ng-scrollbar>
   </mat-menu>
-</mat-toolbar>
+</mat-toolbar> -->

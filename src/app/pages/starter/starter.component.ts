@@ -1,12 +1,14 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-import { MaterialModule } from 'src/app/material.module';
+import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-starter',
   templateUrl: './starter.component.html',
-  standalone: true,
-  imports: [MaterialModule],
   styleUrls: ['./starter.component.scss'],
-  encapsulation: ViewEncapsulation.None,
 })
-export class StarterComponent {}
+export class StarterComponent implements OnInit {
+
+  ngOnInit(): void {
+    
+  }
+}

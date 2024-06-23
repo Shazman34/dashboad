@@ -2,6 +2,19 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BlankComponent } from './layouts/blank/blank.component';
 import { FullComponent } from './layouts/full/full.component';
+import { StarterComponent } from './pages/starter/starter.component';
+import { RecurringComponent } from './pages/recurring/recurring.component';
+import { CouponsComponent } from './pages/coupons/coupons.component';
+import { CustomersComponent } from './pages/customers/customers.component';
+import { JobsComponent } from './pages/jobs/jobs.component';
+import { OnlinebookingComponent } from './pages/onlinebooking/onlinebooking.component';
+import { PaymentsComponent } from './pages/payments/payments.component';
+import { CustomizerComponent } from './layouts/full/shared/customizer/customizer.component';
+import { ScheduleComponent } from './pages/schedule/schedule.component';
+import { ServicesComponent } from './pages/services/services.component';
+import { SettingsComponent } from './pages/settings/settings.component';
+import { TeamComponent } from './pages/team/team.component';
+import { TerritoriesComponent } from './pages/territories/territories.component';
 
 const routes: Routes = [
   {
@@ -10,14 +23,96 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: '/starter',
-        pathMatch: 'full',
+        component: StarterComponent,
+        data: {
+          title: 'Dashboard',
+        },
       },
       {
-        path: 'starter',
-        loadChildren: () =>
-          import('./pages/pages.module').then((m) => m.PagesModule),
+        path: 'recurring',
+        component: RecurringComponent,
+        data: {
+          title: 'Recurring',
+        },
       },
+      {
+        path: 'coupons',
+        component: CouponsComponent,
+        data: {
+          title: 'Coupons',
+        },
+      },
+      {
+        path: 'customers',
+        component: CustomizerComponent,
+        data: {
+          title: 'Customers',
+        },
+      },
+      {
+        path: 'jobs',
+        component: JobsComponent,
+        data: {
+          title: 'Jobs',
+        },
+      },
+      {
+        path: 'onlinebookings',
+        component: OnlinebookingComponent,
+        data: {
+          title: 'Online Bookings',
+        },
+      },
+      {
+        path: 'schedule',
+        component: ScheduleComponent,
+        data: {
+          title: 'Schedules',
+        },
+      },
+      {
+        path: 'payments',
+        component: PaymentsComponent,
+        data: {
+          title: 'Payments',
+        },
+      },
+      {
+        path: 'services',
+        component: ServicesComponent,
+        data: {
+          title: 'Services',
+        },
+      },
+      {
+        path: 'settings',
+        component: SettingsComponent,
+        data: {
+          title: 'Settings',
+        },
+      }, {
+        path: 'team',
+        component: TeamComponent,
+        data: {
+          title: 'Teams',
+        },
+      }, {
+        path: 'territories',
+        component: TerritoriesComponent,
+        data: {
+          title: 'Territories',
+        },
+      },
+      // {
+      //   path: '',
+      //   redirectTo: '/starter',
+      //   pathMatch: 'full',
+      // },
+      // {
+      //   path: 'starter',
+      //   loadChildren: () =>
+      //     import('./pages/pages.module').then((m) => m.PagesModule),
+      // },
     ],
   },
   {

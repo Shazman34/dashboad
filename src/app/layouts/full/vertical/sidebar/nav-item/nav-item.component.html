@@ -34,7 +34,7 @@
   </span>
 </a>
 
-<!-- external Link -->
+
 <mat-list-item
   onClick="window.open('//google.com')"
   class="menu-list-item"
@@ -49,7 +49,7 @@
   <span class="hide-menu">{{ item.displayName | translate }}</span>
 </mat-list-item>
 
-<!-- children -->
+
 <div *ngIf="expanded">
   <app-nav-item
     *ngFor="let child of item.children"
