@@ -1,1 +1,70 @@
-<p>jobs works!</p>
+
+
+<div class="col-lg-12">
+    <mat-card class="b-1 shadow-none">
+        <mat-card-header style="margin-bottom: 17px !important;">
+            <div class="card-header-container">
+              <div class="left-title">
+                <mat-card-title>Jobs</mat-card-title>
+              </div>
+              <div class="right-title">
+                <!-- <mat-card-title>Create Job</mat-card-title> -->
+    
+                <button mat-raised-button color="primary" (click)="createJob()">Create Job</button>
+
+
+              </div>
+            </div>
+          </mat-card-header>
+      <mat-card-content class="b-t-1">
+        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+          <mat-tab label="All Jobs">
+            <div class="bg-light-primary mat-body-1 p-16 rounded m-t-12">
+                You don't have any upcoming jobs.
+            </div>
+          </mat-tab>
+          <mat-tab label="Upcoming "
+            ><div class="bg-light-primary mat-body-1 p-16 rounded m-t-12">
+                You have no upcoming jobs  
+                <button mat-raised-button color="primary">Add Job</button>          </div></mat-tab
+          >
+          <mat-tab label="Past"
+            ><div class="bg-light-primary mat-body-1 p-16 rounded m-t-12">
+             
+All caught up!
+You have no past jobs
+            </div></mat-tab
+          >
+          <mat-tab label="Complete"
+          ><div class="bg-light-primary mat-body-1 p-16 rounded m-t-12">
+            You have no previous jobs that have been marked complete
+
+          </div></mat-tab
+        >
+        <mat-tab label="Past"
+        ><div class="bg-light-primary mat-body-1 p-16 rounded m-t-12">
+       
+All caught up! 
+You have no previous jobs that are incomplete
+
+        </div></mat-tab
+      >
+      <mat-tab label="Incomplete"
+      ><div class="bg-light-primary mat-body-1 p-16 rounded m-t-12">
+        You have no canceled jobs
+    </div></mat-tab
+    >
+    <mat-tab label="Canceled"
+    ><div class="bg-light-primary mat-body-1 p-16 rounded m-t-12">
+     No Data
+    </div></mat-tab
+  >
+  <mat-tab label="Date Range"
+  ><div class="bg-light-primary mat-body-1 p-16 rounded m-t-12">
+    No jobs scheduled to occur between your date range
+</div></mat-tab
+>
+        </mat-tab-group>
+      </mat-card-content>
+    </mat-card>
+  </div>

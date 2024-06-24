@@ -8,7 +8,7 @@
         <ng-template
           ngFor
           let-url
-          [ngForOf]="pageInfo?.['urls']"
+          ngFor="pageInfo?.['urls']"
           let-last="last"
         >
           <li class="breadcrumb-item" *ngIf="!last" [routerLink]="url.url">

@@ -36,6 +36,12 @@ import { ServicesComponent } from './pages/services/services.component';
 import { TeamComponent } from './pages/team/team.component';
 import { TerritoriesComponent } from './pages/territories/territories.component';
 import { CouponsComponent } from './pages/coupons/coupons.component';
+import { AppFullcalendarComponent, CalendarDialogComponent } from './pages/fullcalendar/fullcalendar.component';
+import { CalendarFormDialogComponent } from './pages/fullcalendar/calendar-form-dialog/calendar-form-dialog.component';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { MatNativeDateModule } from '@angular/material/core';
+import { CreateJobsComponent } from './pages/jobs/create-jobs/create-jobs.component';
 
 export function HttpLoaderFactory(http: HttpClient): any {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -46,10 +52,14 @@ export function HttpLoaderFactory(http: HttpClient): any {
     StarterComponent,
     CustomersComponent,
     JobsComponent,
+    CreateJobsComponent,
     OnlinebookingComponent,
     PaymentsComponent,
     SettingsComponent,
     ScheduleComponent,
+    AppFullcalendarComponent,
+    CalendarFormDialogComponent,
+    CalendarDialogComponent,
     ServicesComponent,
     TeamComponent,
     TerritoriesComponent,
@@ -78,6 +88,12 @@ export function HttpLoaderFactory(http: HttpClient): any {
     }),
 
     FullComponent,
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory,
+    }),
+    MatNativeDateModule,
+    MaterialModule
   ],
   exports: [TablerIconsModule],
   bootstrap: [AppComponent],

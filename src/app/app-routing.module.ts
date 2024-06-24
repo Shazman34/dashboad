@@ -15,6 +15,8 @@ import { ServicesComponent } from './pages/services/services.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { TeamComponent } from './pages/team/team.component';
 import { TerritoriesComponent } from './pages/territories/territories.component';
+import { AppFullcalendarComponent } from './pages/fullcalendar/fullcalendar.component';
+import { CreateJobsComponent } from './pages/jobs/create-jobs/create-jobs.component';
 
 const routes: Routes = [
   {
@@ -52,10 +54,21 @@ const routes: Routes = [
       {
         path: 'jobs',
         component: JobsComponent,
-        data: {
-          title: 'Jobs',
-        },
+        // data: {
+        //   title: 'Jobs',
+        // },
+        children: [
+          { path: 'create_jobs', component: CreateJobsComponent }
+          // Add other child routes here
+        ]
       },
+      // {
+      //   path: 'create_jobs',
+      //   component: CreateJobsComponent,
+      //   // data: {
+      //   //   title: 'Jobs',
+      //   // },
+      // },
       {
         path: 'onlinebookings',
         component: OnlinebookingComponent,
@@ -65,7 +78,7 @@ const routes: Routes = [
       },
       {
         path: 'schedule',
-        component: ScheduleComponent,
+        component: AppFullcalendarComponent,
         data: {
           title: 'Schedules',
         },
