@@ -1,0 +1,17 @@
+.full-width {
+    width: 100%;
+  }
+  
+  .duration-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .duration-field {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .duration-field:last-child {
+    margin-right: 0;
+  }

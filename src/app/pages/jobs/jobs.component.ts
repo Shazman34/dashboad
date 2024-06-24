@@ -9,6 +9,6 @@ import { Router } from '@angular/router';
 export class JobsComponent {
   constructor(private router: Router) {}
   createJob(){
-    this.router.navigate(['/jobs/create_jobs']);
+    this.router.navigate(['/create_jobs']);
   }
 }

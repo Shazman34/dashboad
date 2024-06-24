@@ -54,21 +54,18 @@ const routes: Routes = [
       {
         path: 'jobs',
         component: JobsComponent,
+      
+        // children: [
+        //   { path: 'create_jobs', component: CreateJobsComponent }
+        // ]
+      },
+      {
+        path: 'create_jobs',
+        component: CreateJobsComponent,
         // data: {
         //   title: 'Jobs',
         // },
-        children: [
-          { path: 'create_jobs', component: CreateJobsComponent }
-          // Add other child routes here
-        ]
       },
-      // {
-      //   path: 'create_jobs',
-      //   component: CreateJobsComponent,
-      //   // data: {
-      //   //   title: 'Jobs',
-      //   // },
-      // },
       {
         path: 'onlinebookings',
         component: OnlinebookingComponent,

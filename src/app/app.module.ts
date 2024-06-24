@@ -42,6 +42,8 @@ import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { MatNativeDateModule } from '@angular/material/core';
 import { CreateJobsComponent } from './pages/jobs/create-jobs/create-jobs.component';
+import { CreateNewCustomerComponent } from './pages/jobs/create-new-customer/create-new-customer.component';
+import { AddCustomServiceComponent } from './pages/jobs/add-custom-service/add-custom-service.component';
 
 export function HttpLoaderFactory(http: HttpClient): any {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -52,8 +54,10 @@ export function HttpLoaderFactory(http: HttpClient): any {
     StarterComponent,
     CustomersComponent,
     JobsComponent,
+    CreateNewCustomerComponent,
     CreateJobsComponent,
     OnlinebookingComponent,
+    AddCustomServiceComponent,
     PaymentsComponent,
     SettingsComponent,
     ScheduleComponent,
