@@ -44,6 +44,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { CreateJobsComponent } from './pages/jobs/create-jobs/create-jobs.component';
 import { CreateNewCustomerComponent } from './pages/jobs/create-new-customer/create-new-customer.component';
 import { AddCustomServiceComponent } from './pages/jobs/add-custom-service/add-custom-service.component';
+import { DeletePopupComponent } from './pages/popups/delete-popup/delete-popup.component';
+import { CustomerInfoComponent } from './pages/customers/customer-info/customer-info.component';
 
 export function HttpLoaderFactory(http: HttpClient): any {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -68,7 +70,9 @@ export function HttpLoaderFactory(http: HttpClient): any {
     TeamComponent,
     TerritoriesComponent,
     CouponsComponent,
-    RecurringComponent
+    RecurringComponent,
+    DeletePopupComponent,
+    CustomerInfoComponent
   ],
   imports: [
     BrowserModule,
