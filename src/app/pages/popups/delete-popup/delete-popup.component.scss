@@ -1,0 +1,72 @@
+// .mat-step-header:hover:not([aria-disabled]), .mat-step-header:hover[aria-disabled=false] {
+//     border: 1px solid gray !important;
+// }
+
+/* Add border to each mat-step */
+.mat-step .mat-step-header{
+    border: 1px solid gray !important; /* Default border color */
+    border-radius: 17px;
+    margin-bottom: 16px; /* Space between steps */
+    padding: 16px;
+  }
+
+  .mat-step .mat-step-header:hover {
+    background-color: rgb(3, 124, 255)
+}
+// :host ::ng-deep .mat-step-header:hover {
+
+//     border-color: #3f51b5 !important; /* Hover border color */
+//     border-radius: 17px !important;
+//     margin-top: 7px !important;
+// }
+
+.mat-step-header:hover:not([aria-disabled]), .mat-step-header:hover[aria-disabled=false] {
+    background-color: rgb(3, 124, 255) !important;
+    color: white !important;
+    .mat-step-label{
+        color: white !important;
+        font-weight: bold;
+    }
+    .mat-step-icon {
+        background-color: white !important;
+        color: black !important;
+    }
+}
+.mat-step-icon {
+    // background-color: gray !important;
+    color: white !important;
+    font-weight: bold;
+}
+
+.mat-step-label{
+    font-weight: bold !important;
+}
+.mat-step-label.mat-step-label-active:hover {
+    color: red !important;
+    font-weight: bold;
+}
+
+/* Background color for active step */
+:host ::ng-deep .mat-step .mat-step-header.mat-active {
+    background-color: orange !important; /* Custom background color for active step */
+    border-color: #3f51b5; /* Optionally, change border color for active step */
+  }
+  
+  /* Background color for completed step */
+  ::ng-deep .mat-step-header.mat-completed {
+    background-color: red !important; /* Custom background color for completed step */
+    border-color: #388e3c; /* Optionally, change border color for completed step */
+  }
+
+
+
+
+  /* Styles for .mat-step-header's label */
+::ng-deep .mat-vertical-stepper .mat-step-header .mat-step-label {
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover effect for .mat-step-header's label */
+  ::ng-deep .mat-vertical-stepper .mat-step-header:hover .mat-step-label {
+    color: #3f51b5; /* Hover text color */
+  }

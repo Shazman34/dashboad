@@ -46,7 +46,7 @@ const routes: Routes = [
       },
       {
         path: 'customers',
-        component: CustomizerComponent,
+        component: CustomersComponent,
         data: {
           title: 'Customers',
         },
