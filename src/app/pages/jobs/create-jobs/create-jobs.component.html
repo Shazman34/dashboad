@@ -5,7 +5,7 @@
     </mat-card-header>
     <mat-card-content class="b-t-1">
       <mat-stepper orientation="vertical" #stepper>
-        <mat-step [stepControl]="firstFormGroup">
+        <mat-step [stepControl]="firstFormGroup" class="mat-step">
           <form class="m-t-24" [formGroup]="firstFormGroup">
             <ng-template matStepLabel>Customer</ng-template>
             <div>
@@ -44,7 +44,7 @@
             </div>
           </form>
         </mat-step>
-        <mat-step [stepControl]="secondFormGroup">
+        <mat-step [stepControl]="secondFormGroup" class="mat-step">
           <form class="m-t-24" [formGroup]="secondFormGroup">
             <ng-template matStepLabel>Location</ng-template>
             <span>{{this.customerData? this.customerData.primaryAddress:''}}</span>
@@ -62,7 +62,7 @@
             </div> -->
           </form>
         </mat-step>
-        <mat-step [stepControl]="secondFormGroup">
+        <mat-step [stepControl]="secondFormGroup" class="mat-step">
             <form class="m-t-24" [formGroup]="secondFormGroup">
               <ng-template matStepLabel>Service</ng-template>
               <div>
@@ -72,7 +72,7 @@
                 >Country</mat-label
               > -->
               <mat-form-field appearance="outline" class="w-100">
-                <mat-select value="male">
+                <mat-select value="male" placeholder="Select Service">
                   <mat-option value="india">Electric</mat-option>
                   <mat-option value="uk">Plumber</mat-option>
                   <mat-option value="africa">Wood</mat-option>
@@ -91,7 +91,7 @@
               </div>
             </form>
           </mat-step>
-          <mat-step [stepControl]="secondFormGroup">
+          <mat-step [stepControl]="secondFormGroup" class="mat-step">
             <form class="m-t-24" [formGroup]="secondFormGroup">
               <ng-template matStepLabel>Schedule</ng-template>
               <div>
@@ -130,7 +130,7 @@
               </div>
             </form>
           </mat-step>
-          <mat-step [stepControl]="secondFormGroup">
+          <mat-step [stepControl]="secondFormGroup" class="mat-step">
             <form class="m-t-24" [formGroup]="secondFormGroup">
               <ng-template matStepLabel>Review</ng-template>
               <div>
@@ -169,7 +169,7 @@
               </div>
             </form>
           </mat-step>
-        <mat-step>
+        <mat-step class="mat-step">
           <ng-template matStepLabel>Finish</ng-template>
           <h4 class="mat-headline-6 m-t-24">Terms and condition</h4>
           <p class="m-t-8 f-s-14">Sard about this site or you have been to it, but you cannot figure out what it is or what it can do. MTA web directory isSard about this site or you have been to it, but you cannot figure out what it is or what it can do. MTA web directory is</p>

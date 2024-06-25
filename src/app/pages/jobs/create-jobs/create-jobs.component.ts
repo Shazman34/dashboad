@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { MatAccordion } from '@angular/material/expansion';
@@ -8,7 +8,8 @@ import { AddCustomServiceComponent } from '../add-custom-service/add-custom-serv
 @Component({
   selector: 'app-create-jobs',
   templateUrl: './create-jobs.component.html',
-  styleUrls: ['./create-jobs.component.scss']
+  styleUrls: ['./create-jobs.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class CreateJobsComponent {
   
