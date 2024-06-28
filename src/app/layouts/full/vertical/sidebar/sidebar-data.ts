@@ -7,7 +7,7 @@ export const navItems: NavItem[] = [
   {
     displayName: 'Dashboard',
     iconName: 'home',
-    route: '/starter',
+    route: '/',
   },
   {
     navCap: 'Other',
