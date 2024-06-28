@@ -1,184 +1,286 @@
-
 <mat-card class="cardWithShadow theme-card">
-    <mat-card-header>
-      <mat-card-title class="m-b-0">Create Job</mat-card-title>
-    </mat-card-header>
-    <mat-card-content class="b-t-1">
-      <mat-stepper orientation="vertical" #stepper>
-        <mat-step [stepControl]="firstFormGroup" class="mat-step">
-          <form class="m-t-24" [formGroup]="firstFormGroup">
-            <ng-template matStepLabel>Customer</ng-template>
-            <div>
-                <div class="row">
-   
-                    <div class="col-lg-12 col-sm-12">
-                        <p style="font-weight: bold; font-size: 16; align-items: center; width: 72%; padding-left: 22%;">Find or Create a customer</p>
-                        <p style="word-wrap: break-word; align-items: center;width: 88%; padding-left: 22%;">
-                            "Which customer would you 
-                            like to create this job for?
-                             If they've booked you before, you can search them by name, email, or phone."
-                        </p>
-                     </div>
-                     <div class="col-lg-12 col-sm-12" style="    padding-left: 20%;
-    padding-right: 9%;">
-                        <mat-form-field appearance="outline" class="w-100">
-                            <input matInput formControlName="firstCtrl" required placeholder="Search Customer" (focus)="onFocus()" />
-                            <mat-icon matSuffix>search</mat-icon>
-                          </mat-form-field>
-                     </div>
-                     <button style="margin-left: 20%;" mat-flat-button color="primary" *ngIf="isFocused" class="search-button" (click)="addcustomer()"> + Create a new customer</button>
+  <mat-card-header>
+    <mat-card-title class="m-b-0">Create Job</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="b-t-1">
+    <mat-stepper orientation="vertical" #stepper>
+      <mat-step [stepControl]="firstFormGroup" class="mat-step">
+        <form class="m-t-24" [formGroup]="firstFormGroup">
+          <ng-template matStepLabel>Customer</ng-template>
+          <div>
+            <div class="row">
 
-                    </div>
-          
-              <!-- <mat-label class="mat-subtitle-2 f-w-600 d-block m-b-16"
+              <div class="col-lg-12 col-sm-12">
+                <p style="font-weight: bold; font-size: 16; align-items: center; width: 72%; padding-left: 22%;">Find or
+                  Create a customer</p>
+                <p style="word-wrap: break-word; align-items: center;width: 88%; padding-left: 22%;">
+                  "Which customer would you
+                  like to create this job for?
+                  If they've booked you before, you can search them by name, email, or phone."
+                </p>
+              </div>
+              <div class="col-lg-12 col-sm-12" style="    padding-left: 20%;
+    padding-right: 9%;">
+                <mat-form-field appearance="outline" class="w-100">
+                  <input matInput formControlName="firstCtrl" required placeholder="Search Customer"
+                    (focus)="onFocus()" />
+                  <mat-icon matSuffix>search</mat-icon>
+                </mat-form-field>
+              </div>
+              <button style="margin-left: 20%;" mat-flat-button color="primary" *ngIf="isFocused" class="search-button"
+                (click)="addcustomer()"> + Create a new customer</button>
+
+            </div>
+
+            <!-- <mat-label class="mat-subtitle-2 f-w-600 d-block m-b-16"
                 >Name
               </mat-label> -->
-              <!-- <mat-form-field appearance="outline" class="w-100">
+            <!-- <mat-form-field appearance="outline" class="w-100">
                 <input matInput formControlName="firstCtrl" required placeholder="Search Customer" />
               </mat-form-field> -->
-              
-           
-            </div>
-            <div class="text-right">
-              <button mat-flat-button color="primary" matStepperNext>Next</button>
-            </div>
-          </form>
-        </mat-step>
-        <mat-step [stepControl]="secondFormGroup" class="mat-step">
-          <form class="m-t-24" [formGroup]="secondFormGroup">
-            <ng-template matStepLabel>Location</ng-template>
-            <span>{{this.customerData? this.customerData.primaryAddress:''}}</span>
-            
-            <div>
-            
-             
-            
-            </div>
-            <!-- <div class="d-flex align-items-center justify-content-between">
+
+
+          </div>
+          <div class="text-right">
+            <button mat-flat-button color="primary" matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="secondFormGroup" class="mat-step">
+        <form class="m-t-24" [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>Location</ng-template>
+          <span>{{this.customerData? this.customerData.primaryAddress:''}}</span>
+
+          <div>
+
+
+
+          </div>
+          <!-- <div class="d-flex align-items-center justify-content-between">
               <button mat-flat-button color="warn" matStepperPrevious>
                 Back
               </button>
               <button mat-flat-button color="primary" matStepperNext>Next</button>
             </div> -->
-          </form>
-        </mat-step>
-        <mat-step [stepControl]="secondFormGroup" class="mat-step">
-            <form class="m-t-24" [formGroup]="secondFormGroup">
-              <ng-template matStepLabel>Service</ng-template>
-              <div>
-                <h2>Select or create a service</h2>
-                <!-- input -->
-                <!-- <mat-label class="mat-subtitle-2 f-w-600 m-b-8 d-block"
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="secondFormGroup" class="mat-step">
+        <form class="m-t-24" [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>Service</ng-template>
+          <div>
+            <h2>Select or create a service</h2>
+            <!-- input -->
+            <!-- <mat-label class="mat-subtitle-2 f-w-600 m-b-8 d-block"
                 >Country</mat-label
               > -->
-              <mat-form-field appearance="outline" class="w-100">
-                <mat-select value="male" placeholder="Select Service">
-                  <mat-option value="india">Electric</mat-option>
-                  <mat-option value="uk">Plumber</mat-option>
-                  <mat-option value="africa">Wood</mat-option>
-                </mat-select>
-              </mat-form-field>
-             
-              <!-- <span>Add custom Service</span> -->
-              <button mat-button color="primary" style="color: rgb(3, 124, 255);" (click)="addService()"> + Add custom Service</button>
-             
-              </div>
-              <div class="d-flex align-items-center justify-content-between">
-                <button mat-flat-button color="" matStepperPrevious>
-                  
-                </button>
-                <button mat-flat-button color="primary" matStepperNext>Continue</button>
-              </div>
-            </form>
-          </mat-step>
-          <mat-step [stepControl]="secondFormGroup" class="mat-step">
-            <form class="m-t-24" [formGroup]="secondFormGroup">
-              <ng-template matStepLabel>Schedule</ng-template>
-              <div>
-                <!-- input -->
-                <mat-label class="mat-subtitle-2 f-w-600 d-block m-b-16"
-                  >First Name
-                </mat-label>
-                <mat-form-field appearance="outline" class="w-100">
-                  <input matInput formControlName="secondCtrl" required />
-                </mat-form-field>
-                <!-- input -->
-                <mat-label class="mat-subtitle-2 f-w-600 d-block m-b-16"
-                  >Last Name
-                </mat-label>
-                <mat-form-field appearance="outline" class="w-100">
-                  <input matInput formControlName="secondCtrl" required />
-                </mat-form-field>
-                <!-- input -->
-                <mat-label class="mat-subtitle-2 f-w-600 d-block m-b-16"
-                  >Address
-                </mat-label>
-                <mat-form-field appearance="outline" class="w-100">
-                  <textarea
-                    rows="5"
-                    matInput
-                    formControlName="secondCtrl"
-                    required
-                  ></textarea>
-                </mat-form-field>
-              </div>
-              <div class="d-flex align-items-center justify-content-between">
-                <button mat-flat-button color="warn" matStepperPrevious>
-                  Back
-                </button>
-                <button mat-flat-button color="primary" matStepperNext>Next</button>
-              </div>
-            </form>
-          </mat-step>
-          <mat-step [stepControl]="secondFormGroup" class="mat-step">
-            <form class="m-t-24" [formGroup]="secondFormGroup">
-              <ng-template matStepLabel>Review</ng-template>
-              <div>
-                <!-- input -->
-                <mat-label class="mat-subtitle-2 f-w-600 d-block m-b-16"
-                  >First Name
-                </mat-label>
-                <mat-form-field appearance="outline" class="w-100">
-                  <input matInput formControlName="secondCtrl" required />
-                </mat-form-field>
-                <!-- input -->
-                <mat-label class="mat-subtitle-2 f-w-600 d-block m-b-16"
-                  >Last Name
-                </mat-label>
-                <mat-form-field appearance="outline" class="w-100">
-                  <input matInput formControlName="secondCtrl" required />
-                </mat-form-field>
-                <!-- input -->
-                <mat-label class="mat-subtitle-2 f-w-600 d-block m-b-16"
-                  >Address
-                </mat-label>
-                <mat-form-field appearance="outline" class="w-100">
-                  <textarea
-                    rows="5"
-                    matInput
-                    formControlName="secondCtrl"
-                    required
-                  ></textarea>
-                </mat-form-field>
-              </div>
-              <div class="d-flex align-items-center justify-content-between">
-                <button mat-flat-button color="warn" matStepperPrevious>
-                  Back
-                </button>
-                <button mat-flat-button color="primary" matStepperNext>Next</button>
-              </div>
-            </form>
-          </mat-step>
-        <mat-step class="mat-step">
-          <ng-template matStepLabel>Finish</ng-template>
-          <h4 class="mat-headline-6 m-t-24">Terms and condition</h4>
-          <p class="m-t-8 f-s-14">Sard about this site or you have been to it, but you cannot figure out what it is or what it can do. MTA web directory isSard about this site or you have been to it, but you cannot figure out what it is or what it can do. MTA web directory is</p>
-          <mat-checkbox checked color="primary">Agree with terms?</mat-checkbox>
-          <div class="d-flex justify-content-between m-t-16">
-            <button mat-flat-button color="warn" matStepperPrevious>Back</button>
-            <button mat-flat-button color="primary" (click)="stepper.reset()">Finish</button>
+            <mat-form-field appearance="outline" class="w-100">
+              <mat-select value="male" placeholder="Select Service">
+                <mat-option value="india">Electric</mat-option>
+                <mat-option value="uk">Plumber</mat-option>
+                <mat-option value="africa">Wood</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <!-- <span>Add custom Service</span> -->
+            <button mat-button color="primary" style="color: rgb(3, 124, 255);" (click)="addService()"> + Add custom
+              Service</button>
+
           </div>
-        </mat-step>
-      </mat-stepper>
-    </mat-card-content>
-  </mat-card>
+          <div class="d-flex align-items-center justify-content-between">
+            <button mat-flat-button color="" matStepperPrevious>
+
+            </button>
+            <button mat-flat-button color="primary" matStepperNext>Continue</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="secondFormGroup" class="mat-step">
+        <form class="m-t-24" [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>Schedule</ng-template>
+          <div>
+            <!-- input -->
+            <mat-label class="mat-subtitle-2 f-w-600 d-block m-b-16">First Name
+            </mat-label>
+            <mat-form-field appearance="outline" class="w-100">
+              <input matInput formControlName="secondCtrl" required />
+            </mat-form-field>
+            <!-- input -->
+            <mat-label class="mat-subtitle-2 f-w-600 d-block m-b-16">Last Name
+            </mat-label>
+            <mat-form-field appearance="outline" class="w-100">
+              <input matInput formControlName="secondCtrl" required />
+            </mat-form-field>
+            <!-- input -->
+            <mat-label class="mat-subtitle-2 f-w-600 d-block m-b-16">Address
+            </mat-label>
+            <mat-form-field appearance="outline" class="w-100">
+              <textarea rows="5" matInput formControlName="secondCtrl" required></textarea>
+            </mat-form-field>
+          </div>
+          <div class="d-flex align-items-center justify-content-between">
+            <button mat-flat-button color="warn" matStepperPrevious>
+              Back
+            </button>
+            <button mat-flat-button color="primary" matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="secondFormGroup" class="mat-step">
+        <form class="" [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>Review</ng-template>
+
+          <!-- <div class="row">
+                <div class="col-lg-8">
+                  <mat-card class="cardWithShadow">
+                    <mat-card-header class="d-flex align-items-center">
+                      <mat-card-title>Monthly Earnings</mat-card-title>
+                      <div class="m-l-auto">
+                        <button mat-fab color="accent" class="shadow-none icon-48">
+                          <i-tabler name="currency-dollar" class="text-white d-flex"></i-tabler>
+                        </button>
+                      </div>
+                    </mat-card-header>
+                    <mat-card-content class="m-b-32">
+                      <h4 class="mat-headline-5">$6,820</h4>
+                      <div class="d-flex align-items-center m-t-16">
+                        <button
+                          mat-mini-fab
+                          class="bg-light-error text-error shadow-none icon-27"
+                        >
+                          <i-tabler name="arrow-down-right" class="icon-20"></i-tabler>
+                        </button>
+                        <div class="mat-body-1 f-w-600 m-l-12">+9%</div>
+                        <div class="mat-body-1 m-l-4">last year</div>
+                      </div>
+                    </mat-card-content>
+                 
+                  </mat-card>
+                  
+                </div>
+                <div class="col-lg-4">
+                  
+                </div>
+              </div> -->
+          <div class="review-page-container">
+            <div class="column column-1">
+              <mat-card class="pricing-summary-card">
+                <mat-card-title class="mat-titile">Pricing summary</mat-card-title>
+                <mat-card-content>
+                  <div class="pricing-summary-content">
+                    <div>
+                      <strong>SERVICE</strong>
+                      <p>new service 2</p>
+                    </div>
+                    <mat-slide-toggle>Set service price manually</mat-slide-toggle>
+                    <hr class="separator" />
+                    <div class="custom-line-items">
+                      <div>
+                        <strong>CUSTOM LINE ITEMS</strong>
+                        <mat-icon matTooltip="Custom line items">help_outline</mat-icon>
+                      </div>
+                      <div class="line-item">
+                        <span>da</span>
+                        <span>$0.51</span>
+                        <mat-icon>close</mat-icon>
+                      </div>
+                      <a 
+                        style="text-decoration: none !important; cursor: pointer; color: rgb(3, 124, 255) !important;" (click)="reviewSummary('add_item')">Add
+                        line item</a>
+                      <hr class="separator" />
+                    </div>
+                    <div class="summary">
+                      <div>Subtotal <span>$0.51</span></div>
+                      <a (click)="reviewSummary('add_discount')"
+                        style="text-decoration: none !important; cursor: pointer; color: rgb(3, 124, 255) !important;">Edit
+                        Discount</a> <span>-$0.51</span>
+                      <a (click)="reviewSummary('add_tax')"
+                        style="text-decoration: none !important; cursor: pointer; color: rgb(3, 124, 255) !important;">Add
+                        Tax</a>
+                      <div>Total <span>$0.00</span></div>
+                    </div>
+                  </div>
+                </mat-card-content>
+
+              </mat-card>
+              <div class="create-job-button-container">
+                <button mat-raised-button color="primary">Create Job</button>
+              </div>
+            </div>
+
+            <div class="column column-2">
+              <mat-card class="payment-method-card">
+                <mat-card-title class="mat-titile">Payment method</mat-card-title>
+                <mat-card-content class="p-t-0">
+                  <p>Attach a credit or debit card to charge at a later time when the job is complete.</p>
+                  <a (click)="addPaymentMethod()"
+                    style="text-decoration: none !important; cursor: pointer; color: rgb(3, 124, 255) !important;">+ Add
+                    payment method</a>
+                </mat-card-content>
+              </mat-card>
+
+              <mat-card class="job-notes-card" style="background-color: rgb(250, 246, 233) !important;">
+                <mat-card-title class="mat-titile">Job notes</mat-card-title>
+                <mat-card-content class="p-t-0">
+                  <p>Add an internal note just for teammates to see...</p>
+                  <div class="uploaded-files">
+                    <div *ngFor="let file of uploadedFiles" class="file-item">
+                      <ng-container *ngIf="isImage(file)">
+                        <img [src]="file.url" alt="uploaded image" class="uploaded-image" />
+                      </ng-container>
+                      <ng-container *ngIf="!isImage(file)">
+                        <mat-icon>attachment</mat-icon>
+                        <span>{{ file.name }}</span>
+                      </ng-container>
+                      <mat-icon (click)="removeFile(file)">close</mat-icon>
+                    </div>
+                  </div>
+                  <div class="attachments">
+                    <mat-icon (click)="triggerImageUpload()">image</mat-icon>
+                    <input type="file" #imageInput (change)="onImageSelected($event)" accept="image/*"
+                      style="display: none;" />
+                    <mat-icon (click)="triggerAttachmentUpload()">attachment</mat-icon>
+                    <input type="file" #attachmentInput (change)="onAttachmentSelected($event)"
+                      style="display: none;" />
+                  </div>
+
+                </mat-card-content>
+              </mat-card>
+
+              <mat-card class="customer-notifications-card">
+                <mat-card-title class="mat-titile">Customer notifications</mat-card-title>
+                <mat-card-content>
+                  <mat-slide-toggle>Email</mat-slide-toggle>
+                  <mat-slide-toggle>Text messages</mat-slide-toggle>
+                </mat-card-content>
+              </mat-card>
+            </div>
+
+
+          </div>
+
+
+
+          <!-- <div class="d-flex align-items-center justify-content-between">
+            <button mat-flat-button color="warn" matStepperPrevious>
+              Back
+            </button>
+            <button mat-flat-button color="primary" matStepperNext>Next</button>
+            <button type="submit" color="primary">Create Job</button>
+          </div> -->
+        </form>
+      </mat-step>
+      <!-- <mat-step class="mat-step">
+        <ng-template matStepLabel>Finish</ng-template>
+        <h4 class="mat-headline-6 m-t-24">Terms and condition</h4>
+        <p class="m-t-8 f-s-14">Sard about this site or you have been to it, but you cannot figure out what it is or
+          what it can do. MTA web directory isSard about this site or you have been to it, but you cannot figure out
+          what it is or what it can do. MTA web directory is</p>
+        <mat-checkbox checked color="primary">Agree with terms?</mat-checkbox>
+        <div class="d-flex justify-content-between m-t-16">
+          <button mat-flat-button color="warn" matStepperPrevious>Back</button>
+          <button mat-flat-button color="primary" (click)="stepper.reset()">Finish</button>
+        </div>
+      </mat-step> -->
+    </mat-stepper>
+  </mat-card-content>
+</mat-card>

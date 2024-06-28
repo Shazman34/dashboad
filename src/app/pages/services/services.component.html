@@ -1,1 +1,43 @@
-<p>services works!</p>
+
+   
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="services-container">
+                <!-- <div class="row">
+                    <div class="col-lg-10">
+                        <h1>Services</h1>
+                    </div>
+                    <div class="col-lg-2">
+                        <button mat-raised-button color="primary" class="add-service-btn" (click)="addService()">Add Service</button>
+                    </div>
+                  
+                </div> -->
+                <div class="header">
+                    <h1>Services</h1>
+                    <button mat-raised-button color="primary" (click)="addService()">Add Service</button>
+                  </div>
+                
+                <div cdkDropList class="service-list" (cdkDropListDropped)="drop($event)">
+                  <div cdkDrag *ngFor="let service of services" class="service-card">
+                    <mat-card>
+                      <div class="service-item">
+                        <mat-icon style="cursor: pointer !important;">drag_indicator</mat-icon>
+                        <!-- <a (click)="serviceDetails()"> -->
+                        <mat-icon style="cursor: pointer !important;" (click)="serviceDetails(service)">build</mat-icon>
+                        <div class="service-details" style="cursor: pointer !important;">
+                          <h2>{{ service.name }}</h2>
+                          <p>{{ service.price }}</p>
+                        </div>
+                        <div class="service-status" style="cursor: pointer !important;">
+                          <span>{{ service.status }}</span>
+                        </div>
+                    <!-- </a> -->
+                      </div>
+                    </mat-card>
+                 
+                  </div>
+                  <mat-card class="service-categories">
+                    <mat-slide-toggle>Service categories</mat-slide-toggle>
+                    <p>Service categories allow you to organize your services into groups for your booking page. <a href="#">Learn more</a></p>
+                  </mat-card>
+        </div></div>

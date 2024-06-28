@@ -17,6 +17,8 @@ import { TeamComponent } from './pages/team/team.component';
 import { TerritoriesComponent } from './pages/territories/territories.component';
 import { AppFullcalendarComponent } from './pages/fullcalendar/fullcalendar.component';
 import { CreateJobsComponent } from './pages/jobs/create-jobs/create-jobs.component';
+import { ServiceDetailedInfoComponent } from './pages/services/service-detailed-info/service-detailed-info.component';
+import { CreateCouponsComponent } from './pages/coupons/create-coupons/create-coupons.component';
 
 const routes: Routes = [
   {
@@ -113,6 +115,24 @@ const routes: Routes = [
           title: 'Territories',
         },
       },
+      {
+        path: 'service-info',
+        component: ServiceDetailedInfoComponent,
+        data: {
+          title: 'Territories',
+        },
+        
+      },
+      {
+        path: 'create-coupons',
+        component: CreateCouponsComponent,
+        data: {
+          title: 'Coupons',
+        },
+        
+      }
+
+      
       // {
       //   path: '',
       //   redirectTo: '/starter',

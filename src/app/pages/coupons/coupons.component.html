@@ -1,1 +1,58 @@
-<p>coupons works!</p>
+<!-- <div class="services-container">
+    <div class="row">
+        <div class="col-lg-7">
+            <h1>Coupons</h1>
+        </div>
+        <div class="col-lg-2">
+            <button mat-flat-button color="primary" class="add-service-btn" (click)="addCoupons()">Add Coupons</button>
+        </div>
+      
+    </div>
+    </div> -->
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="coupon-container">
+                <div class="header">
+                  <h1>Coupons</h1>
+                  <button mat-raised-button color="primary" (click)="addCoupons()">Create Coupon</button>
+                </div>
+                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                  <!-- Code Column -->
+                  <ng-container matColumnDef="code">
+                    <th mat-header-cell *matHeaderCellDef> CODE </th>
+                    <td mat-cell *matCellDef="let element" (click)="onRowClicked(element)" class="clickable"> <span style="color: rgb(3, 124, 255) !important; margin-bottom: 10px !important;">{{element.code}}</span> <br> {{element.description}} </td>
+                  </ng-container>
+              
+                  <!-- Status Column -->
+                  <ng-container matColumnDef="status">
+                    <th mat-header-cell *matHeaderCellDef> STATUS </th>
+                    <td mat-cell *matCellDef="let element" (click)="onRowClicked(element)" class="clickable"> 
+                        <div class="status-container">
+                            <mat-icon class="status-icon" [ngClass]="{'active': element.status === 'Active'}">lens</mat-icon> 
+                            <span>{{element.status}}</span>
+                          </div>
+                    </td>
+                  </ng-container>
+              
+                  <!-- Used Column -->
+                  <ng-container matColumnDef="used">
+                    <th mat-header-cell *matHeaderCellDef> USED </th>
+                    <td mat-cell *matCellDef="let element" (click)="onRowClicked(element)" class="clickable"> {{element.used}} </td>
+                  </ng-container>
+              
+                  <!-- Expires Column -->
+                  <ng-container matColumnDef="expires">
+                    <th mat-header-cell *matHeaderCellDef> EXPIRES </th>
+                    <td mat-cell *matCellDef="let element" (click)="onRowClicked(element)" class="clickable"> {{element.expires}} </td>
+                  </ng-container>
+              
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="onRowClicked(row)" class="clickable"></tr>
+                </table>
+                <mat-paginator [length]="totalCoupons" [pageSize]="pageSize" [pageSizeOptions]="[5, 10, 20]"></mat-paginator>
+              </div>
+        </div>
+    </div>
+  
+      
+      

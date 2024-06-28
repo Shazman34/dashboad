@@ -1,0 +1,36 @@
+.coupon-container {
+    margin: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .clickable {
+    cursor: pointer;
+  }
+  .status-container {
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+  }
+  .status-icon.active {
+    color: green;
+    margin-right: 5px;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  .mat-elevation-z8 {
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  mat-paginator {
+    margin-top: 20px;
+  }
+  

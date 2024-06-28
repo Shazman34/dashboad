@@ -1,0 +1,62 @@
+<mat-card class="cardWithShadow theme-card">
+    <mat-card-header>
+        <mat-card-title class="m-b-0">Payment Method</mat-card-title>
+        <mat-card-subtitle style="margin-top: 2% !important;">Select the expected payment method for this
+            job</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="b-t-1">
+        <div class="row">
+            <div class="col-lg-12">
+                <mat-card class="b-1 shadow-none">
+                    <mat-card-header>
+                        <mat-card-title style="font-size: 11px !important; ">CUSTOMER'S CARDS ON FILE </mat-card-title>
+                        <a style="text-decoration: none !important; cursor: pointer; color: rgb(3, 124, 255) !important; margin-left: 35% !important;"
+                            (click)="addNewCard()"> Add New Card</a>
+                        <!-- <mat-card-subtitle>CUSTOMER'S CARDS ON FILE </mat-card-subtitle> -->
+
+
+                    </mat-card-header>
+                    <mat-card-content class="b-t-1 " style="padding: 0px !important;">
+                        <!-- <mat-selection-list #shoes2 [multiple]="false">
+                    <mat-list-option *ngFor="let shoe of typesOfShoes" [value]="shoe">
+                      {{ shoe }}
+                    </mat-list-option>
+                  </mat-selection-list> -->
+                        <p style="text-align: center;">No Saved Card</p>
+                        <!-- <p class="mat-subtitle-2 f-w-600 p-16 bg-light-primary rounded">
+                    Option selected:
+                    {{
+                      shoes2.selectedOptions.hasValue()
+                        ? shoes2.selectedOptions.selected[0].value
+                        : "None"
+                    }}
+                  </p> -->
+                    </mat-card-content>
+                </mat-card>
+                <mat-card class="b-1 shadow-none">
+                    <mat-card-header>
+                        <mat-card-title style="font-size: 11px;">OTHER PAYMENT METHODS </mat-card-title>
+                        <!-- <mat-card-subtitle>OTHER PAYMENT METHODS</mat-card-subtitle> -->
+
+                    </mat-card-header>
+                    <mat-card-content class="b-t-1">
+                        <mat-selection-list #shoes2 [multiple]="false">
+                            <mat-list-option *ngFor="let shoe of typesOfShoes" [value]="shoe">
+                                {{ shoe }}
+                            </mat-list-option>
+                        </mat-selection-list>
+
+                        <p class="mat-subtitle-2 f-w-600 p-16 bg-light-primary rounded">
+                            Option selected:
+                            {{
+                            shoes2.selectedOptions.hasValue()
+                            ? shoes2.selectedOptions.selected[0].value
+                            : "None"
+                            }}
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

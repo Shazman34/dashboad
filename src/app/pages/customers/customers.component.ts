@@ -167,6 +167,7 @@ export class CustomersComponent {
     obj.action = action;
     const dialogRef = this.dialog.open(CreateNewCustomerComponent, {
       data: obj,
+      width:'600px'
     });
     dialogRef.afterClosed().subscribe((result) => {
       if (result.event === 'Add') {

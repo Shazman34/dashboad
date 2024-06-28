@@ -1,0 +1,52 @@
+<!-- <h1 mat-dialog-title>Create a service</h1>
+<div mat-dialog-content>
+  <p>A service is something your customers can book online. For example, a home cleaning or a junk removal pickup.</p>
+  <mat-form-field class="w-100">
+    <mat-label>Name</mat-label>
+    <input matInput placeholder="Enter service name" [(ngModel)]="serviceName">
+  </mat-form-field>
+  <p>Give this service a name which broadly describes it. For example, <em>Home Cleaning</em> rather than <em>1 Bedroom Home Cleaning</em>.</p>
+  <p>You'll be able to add variations and options next to make it customizable.</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-flat-button color="primary" (click)="onCreate()">Create Service</button>
+  <button mat-button mat-dialog-close>Cancel</button>
+</div> -->
+
+
+<div class="col-lg-12">
+    <mat-card class="cardWithShadow theme-card">
+      <mat-card-header>
+        <mat-card-title class="m-b-0">Create a service </mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="b-t-1">
+  <h4 class="m-b-5">A service is something your customers can book online. For example, a home cleaning or a junk removal pickup. </h4>
+        <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+          <!-- input -->
+          <mat-label class="mat-subtitle-2 f-w-600 m-b-8 d-block"
+            >Name</mat-label
+          >
+          <mat-form-field appearance="outline" class="w-100">
+            <input matInput placeholder=" Name" formControlName="name"/>
+            <!-- <mat-icon matSuffix>
+              <i-tabler name="user" class="icon-20 d-flex"></i-tabler>
+            </mat-icon> -->
+          </mat-form-field>
+   
+  
+          <h5 class="m-b-5">Give this service a name which broadly describes it. For example, Home Cleaning rather than 1 Bedroom Home Cleaning. 
+          </h5>
+        <h5 class="m-b-5"> You'll be able to add variations and options next to make it customizable.
+        </h5>
+
+  
+         
+          <mat-card-actions class="b-t-1">
+            <button type="submit" mat-flat-button color="primary"[disabled]="!customerForm.valid" >Create Service</button>
+            <button mat-flat-button color="warn" class="m-l-8" (click)="closepopup()">Cancel</button>
+          </mat-card-actions>
+        </form>
+      </mat-card-content>
+    
+    </mat-card>
+  </div>

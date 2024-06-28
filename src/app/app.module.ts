@@ -46,6 +46,13 @@ import { CreateNewCustomerComponent } from './pages/jobs/create-new-customer/cre
 import { AddCustomServiceComponent } from './pages/jobs/add-custom-service/add-custom-service.component';
 import { DeletePopupComponent } from './pages/popups/delete-popup/delete-popup.component';
 import { CustomerInfoComponent } from './pages/customers/customer-info/customer-info.component';
+import { AddTeamComponent } from './pages/team/add-team/add-team.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { AddServiceComponent } from './pages/services/add-service/add-service.component';
+import { ServiceDetailedInfoComponent } from './pages/services/service-detailed-info/service-detailed-info.component';
+import { SelectPaymentMethodComponent } from './pages/jobs/select-payment-method/select-payment-method.component';
+import { ReviewSummaryComponent } from './pages/jobs/review-summary/review-summary.component';
+import { CreateCouponsComponent } from './pages/coupons/create-coupons/create-coupons.component';
 
 export function HttpLoaderFactory(http: HttpClient): any {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -60,6 +67,7 @@ export function HttpLoaderFactory(http: HttpClient): any {
     CreateJobsComponent,
     OnlinebookingComponent,
     AddCustomServiceComponent,
+    AddTeamComponent,
     PaymentsComponent,
     SettingsComponent,
     ScheduleComponent,
@@ -72,7 +80,12 @@ export function HttpLoaderFactory(http: HttpClient): any {
     CouponsComponent,
     RecurringComponent,
     DeletePopupComponent,
-    CustomerInfoComponent
+    CustomerInfoComponent,
+    AddServiceComponent,
+    ServiceDetailedInfoComponent,
+    SelectPaymentMethodComponent,
+    ReviewSummaryComponent,
+    CreateCouponsComponent
   ],
   imports: [
     BrowserModule,
@@ -83,6 +96,7 @@ export function HttpLoaderFactory(http: HttpClient): any {
    
     MaterialModule,
     FormsModule,
+    DragDropModule,
     ReactiveFormsModule,
     MaterialModule,
     TablerIconsModule.pick(TablerIcons),

@@ -1,0 +1,29 @@
+.cards-on-file {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .add-card {
+    color: #3f51b5; /* Change this color as needed */
+  }
+  
+  mat-card {
+    margin-bottom: 20px;
+  }
+  
+  .other-payment-methods {
+    margin-top: 20px;
+  }
+  
+  mat-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  mat-radio-button {
+    margin-right: 0;
+  }
+  

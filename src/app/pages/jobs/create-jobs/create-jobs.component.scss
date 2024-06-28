@@ -70,3 +70,110 @@
   ::ng-deep .mat-vertical-stepper .mat-step-header:hover .mat-step-label {
     color: #3f51b5; /* Hover text color */
   }
+
+
+  .review-page-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .pricing-summary-card {
+    grid-column: span 1; /* This will span the entire column */
+  }
+  
+  .column-2 mat-card {
+    flex: 1;
+  }
+  
+  .separator {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 16px 0;
+  }
+  
+  .custom-line-items {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .custom-line-items .line-item {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .summary {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .summary div {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .attachments {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .create-job-button-container {
+    // display: flex;
+    // justify-content: center;
+    // width: 100%;
+    // grid-column: span 4; /* This will span the entire width */
+  }
+  
+  .mat-titile{
+    margin-left: 20px !important;
+    margin-top: 10px !important;
+  }
+  
+
+  .separator {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 16px 0;
+  }
+
+
+//   files uploading 
+
+.pricing-summary-content, .custom-line-items, .summary, .attachments, .uploaded-files {
+    margin-top: 16px;
+  }
+
+  .uploaded-files {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  
+  .uploaded-files .file-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+  }
+  
+  .uploaded-files .file-item mat-icon {
+    cursor: pointer;
+    margin-left: 8px;
+  }
+  
+  .uploaded-files .uploaded-image {
+    max-width: 100px; /* Adjust the max width as needed */
+    max-height: 100px; /* Adjust the max height as needed */
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 8px;
+  }

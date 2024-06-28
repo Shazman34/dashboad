@@ -1,0 +1,222 @@
+<mat-card class="cardWithShadow theme-card">
+    <div style="position: sticky !important; z-index: 10000 !important;">
+        <mat-card-header >
+            <mat-card-title class="m-b-0 mat-body-1"  >Add Team Members</mat-card-title>
+          </mat-card-header>
+    </div>
+   
+    <mat-card-content class="b-t-1" style="position: sticky !important; z-index: 10000 !important;">
+      <form style="height: 500px !important;">
+        <!--Full Name input -->
+        <mat-label class="mat-subtitle-2 f-w-600 m-b-8 d-block"
+          >Full Name
+          </mat-label
+        >
+        <mat-form-field appearance="outline" class="w-100" color="primary">
+          <input matInput value="" placeholder="Full Name" />
+        </mat-form-field>
+  
+  
+        <div style="display: flex; gap: 16px;">
+            <!-- Email input -->
+            <div style="flex: 1;">
+              <mat-label class="mat-subtitle-2 f-w-600 m-b-8 d-block">Email</mat-label>
+              <mat-form-field appearance="outline" class="w-100" color="primary">
+                <input matInput type="email" placeholder="Email" />
+              </mat-form-field>
+              <p style="margin-top: -20px !important; font-family: Helvetica, Arial, sans-serif; font-size: 13px">An email will be sent with instructions to log into their Zenbooker account.</p>
+
+            </div>
+    
+            <!-- Mobile Phone Number input -->
+            <div style="flex: 1;">
+              <mat-label class="mat-subtitle-2 f-w-600 m-b-8 d-block">Mobile Phone Number</mat-label>
+              <mat-form-field appearance="outline" class="w-100" color="primary">
+                <input matInput type="number" placeholder="Optional" />
+               
+              </mat-form-field>
+              <p style="margin-top: -20px !important; font-family:  Helvetica, Arial, sans-serif; font-size: 13px">Service providers can be notified via SMS when new jobs are assigned to them</p>
+            </div>
+          </div>
+          <mat-label class="mat-subtitle-2 f-w-600 m-b-8 d-block"
+          >Start Location <span>(Optional)</span></mat-label
+        >
+        <mat-form-field appearance="outline" class="w-100" color="primary">
+          <input matInput type="text" placeholder="Enter Address.."/>
+        </mat-form-field>
+        <p style="margin-top: -20px !important;font-family:  Helvetica, Arial, sans-serif; font-size: 13px ">The location this team member starts work from</p>
+        <div class="d-flex align-items-center m-t-24">
+            <!-- <button
+              mat-mini-fab
+              class="bg-light-primary shadow-none rounded icon-48"
+            >
+              <i-tabler
+                name="mail"
+                class="icon-20 d-flex text-primary"
+              ></i-tabler>
+            </button> -->
+            <div class="m-l-16 w-100">
+              <h5 class="f-s-16 f-w-600 m-0 m-b-4">
+                Service Provider
+              </h5>
+              <div
+                class="d-flex align-items-center justify-content-center w-100"
+              >
+                <span class="f-s-14"
+                  >Can this team member be assigned to jobs?
+                  </span
+                >
+                <mat-slide-toggle class="m-l-auto"></mat-slide-toggle>
+              </div>
+            </div>
+          </div>
+          <mat-card class="b-1 cardWithShadow" style="margin-top: 10px !important;">
+            <mat-card-header>
+              <mat-card-title>User Role and Permissions
+            </mat-card-title>
+            </mat-card-header>
+           
+            <mat-accordion>
+                <mat-expansion-panel hideToggle class="cardWithShadow">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title class="f-w-600 mat-body-1">
+                        <div class="mat-subtitle-2 f-w-600" style="font-weight: bold !important; display: flex;">
+                            <input type="radio" checked>
+                            <span style="margin-left: 10px !important;">Worker</span></div>
+                            <br>
+                          
+                       <div>
+                        <br>
+                       
+
+                       </div>   
+
+                    </mat-panel-title>
+                   
+                  </mat-expansion-panel-header>
+                  <p style=" margin-top: 11px !important; margin-left: 20px !important;"> 
+                    Can only view jobs assigned to them. You can customize what job details they can see and edit.
+                </p>
+                  <mat-card-content class="b-t-1">
+                    <div [formGroup]="toppings">
+                      <p>
+                        <mat-checkbox formControlName="pepperoni" color="primary"
+                          >Edit their own availability</mat-checkbox
+                        >
+                      </p>
+                      <p>
+                        <mat-checkbox formControlName="extracheese" color="primary"
+                          >View contact info and notes for customer</mat-checkbox
+                        >
+                      </p>
+                      <p>
+                        <mat-checkbox formControlName="mushroom" color="primary"
+                          >Mark jobs as 'en-route' & 'complete'</mat-checkbox
+                        >
+                      </p>
+                      <p>
+                          <mat-checkbox formControlName="mushroom" color="primary"
+                            >Edit job details</mat-checkbox
+                          >
+                        </p>
+                        <p>
+                          <mat-checkbox formControlName="mushroom" color="primary"
+                            >View & edit job price, invoice, and line items</mat-checkbox
+                          >
+                        </p>
+                        <p>
+                          <mat-checkbox formControlName="mushroom" color="primary"
+                            >Process payments and mark jobs as paid</mat-checkbox
+                          >
+                        </p>
+                        <p>
+                          <mat-checkbox formControlName="mushroom" color="primary"
+                            >Reschedule jobs</mat-checkbox
+                          >
+                        </p>
+                    </div>
+                    <!-- <div
+                      class="p-24 rounded bg-light-primary m-t-16"
+                      [formGroup]="toppings"
+                    >
+                      <h2 class="mat-body-2 f-w-600 m-b-16">You chose:</h2>
+                      {{ toppings.value | json }}
+                    </div> -->
+                  </mat-card-content>
+                </mat-expansion-panel>
+                <mat-expansion-panel class="cardWithShadow" (opened)="panelOpenState = true"
+                  (closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title class="f-w-600 mat-body-1">
+                        <div class="mat-subtitle-2 f-w-600" style="font-weight: bold !important; display: flex;">
+                            <input type="radio" checked>
+                            <span style="margin-left: 10px !important;">Scheduler</span></div>
+                            <br>
+                          
+                       <div>
+                        <br>
+                       
+
+                       </div>   
+
+                    </mat-panel-title>
+                   
+                  </mat-expansion-panel-header>
+                  <p style=" margin-top: 11px !important; margin-left: 20px !important;"> 
+                    Full access to all job and client details. Schedulers can create, dispatch, reschedule, and edit jobs.                </p>
+                  <mat-card-content class="b-t-1">
+                    <div [formGroup]="toppings">
+                      <p>
+                        <mat-checkbox formControlName="pepperoni" color="primary"
+                          >Edit their own availability</mat-checkbox
+                        >
+                      </p>
+                      <p>
+                        <mat-checkbox formControlName="extracheese" color="primary"
+                          >Process payments and mark jobs as paid</mat-checkbox
+                        >
+                      </p>
+                     
+                    </div>
+                    <!-- <div
+                      class="p-24 rounded bg-light-primary m-t-16"
+                      [formGroup]="toppings"
+                    >
+                      <h2 class="mat-body-2 f-w-600 m-b-16">You chose:</h2>
+                      {{ toppings.value | json }}
+                    </div> -->
+                  </mat-card-content>
+                </mat-expansion-panel>
+                <mat-expansion-panel class="cardWithShadow" (opened)="panelOpenState = true"
+                (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                  <mat-panel-title class="f-w-600 mat-body-1">
+                      <div class="mat-subtitle-2 f-w-600" style="font-weight: bold !important; display: flex;">
+                          <input type="radio" checked>
+                          <span style="margin-left: 10px !important;">Manager</span></div>
+                          <br>
+                        
+                     <div>
+                      <br>
+                     
+
+                     </div>   
+
+                  </mat-panel-title>
+                 
+                </mat-expansion-panel-header>
+                <p style=" margin-top: 11px !important; margin-left: 20px !important;"> 
+                    Managers have full access to all areas of the business, including adding or removing users.                <mat-card-content class="b-t-1">
+             
+                
+                </mat-card-content>
+              </mat-expansion-panel>
+              </mat-accordion>
+          </mat-card>
+    
+        <div class="m-t-12">
+          <button mat-flat-button color="primary">Submit</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
