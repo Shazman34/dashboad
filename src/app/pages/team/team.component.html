@@ -1,1 +1,120 @@
-<p>team works!</p>
+<mat-card class="cardWithShadow theme-card">
+    <mat-card-header>
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+            <div><mat-card-title class="m-b-0">Team Members</mat-card-title></div>
+            <div>
+                <button mat-flat-button color="primary" style="float: right;" (click)="addTeam()">
+                    Add Team
+                </button>
+            </div>
+        </div>
+
+
+    </mat-card-header>
+    <mat-card-content class="b-t-1">
+        <div class="row">
+            <div class="col-lg-12">
+                <mat-card class="b-1 shadow-none">
+                    <mat-card-header>
+                        <mat-card-title>Center Align</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content class="b-t-1">
+                        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
+                            <mat-tab label="Active (1)">
+                                <div class=" mat-body-1 p-16 rounded m-t-12" style="border-bottom: 2px solid gray;">
+                                    <div class="team-member-filters">
+                                        <mat-form-field appearance="outline">
+                                            <mat-select placeholder="All team members">
+                                                <mat-option value="all">All team members</mat-option>
+                                                <!-- Add more filter options here -->
+                                            </mat-select>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>Search team members</mat-label>
+                                            <input matInput>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <table mat-table [dataSource]="dataSource">
+                                    <!-- Define your columns here -->
+                                    <ng-container matColumnDef="teamMember">
+                                        <th mat-header-cell *matHeaderCellDef><mat-card-title>Member</mat-card-title>
+                                        </th>
+                                        <td mat-cell *matCellDef="let element">
+                                            <span class="team-member-name">{{element.name}}</span>
+                                            <!-- <span class="team-member-status" matBadge="ACTIVATED" matBadgeColor="primary"></span> -->
+                                            <div class="team-member-email">{{element.email}}</div>
+                                        </td>
+                                    </ng-container>
+                                    <ng-container matColumnDef="accessRole">
+                                        <th mat-header-cell *matHeaderCellDef><mat-card-title>Access
+                                                Role</mat-card-title></th>
+                                        <td mat-cell *matCellDef="let element">{{element.role}}</td>
+                                    </ng-container>
+                                    <ng-container matColumnDef="serviceProvider">
+                                        <th mat-header-cell *matHeaderCellDef><mat-card-title>Service
+                                                Provider</mat-card-title></th>
+                                        <td mat-cell *matCellDef="let element">{{element.serviceProvider}}</td>
+                                    </ng-container>
+                                    <ng-container matColumnDef="actions">
+                                        <th mat-header-cell *matHeaderCellDef></th>
+                                        <td mat-cell *matCellDef="let element">
+                                            <a (click)="viewCustomerInfo('view', element)"
+                                                class="m-r-10 cursor-pointer " #tooltip="matTooltip"
+                                                matTooltip="This serivce provider can edit their availability                            "
+                                                matTooltipPosition="above">
+                                                <mat-icon>schedule</mat-icon>
+                                            </a>
+                                            <a (click)="viewCustomerInfo('view', element)" class="m-r-10 cursor-pointer"
+                                                #tooltip="matTooltip"
+                                                matTooltip="This serivce provider can be auto-assigned to jobs                            "
+                                                matTooltipPosition="above">
+                                                <mat-icon>flash_on</mat-icon>
+                                            </a>
+                                            <a (click)="viewCustomerInfo('view', element)" class="m-r-10 cursor-pointer"
+                                                #tooltip="matTooltip"
+                                                matTooltip="This serivce provider can view and claim available job offers                       "
+                                                matTooltipPosition="above">
+                                                <mat-icon>schedule</mat-icon>
+                                            </a>
+                                            <!-- Add more actions here -->
+                                        </td>
+                                    </ng-container>
+
+                                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                </table>
+                                <mat-paginator [length]="100" [pageSize]="10"></mat-paginator>
+                            </mat-tab>
+                            <mat-tab label="Invited(0)">
+                                <!-- <div class="bg-light-primary mat-body-1 p-16 rounded m-t-12">
+                      Invited(0)
+                    </div> -->
+                                <div style="text-align: center; padding: 20px;" class="bg-light-primary">
+                                    <mat-icon>group</mat-icon>
+
+                                    <p style="font-weight: bold;">No team members match your selection</p>
+                                    <p>You can invite new team members, or edit existing ones.</p>
+                                    <button mat-raised-button color="primary">Clear filters</button>
+                                </div>
+                            </mat-tab>
+                            <mat-tab label="Deactivated(0)">
+                                <!-- <div class="bg-light-primary mat-body-1 p-16 rounded m-t-12">
+                                    Deactivated(0)
+                                </div> -->
+                                <div style="text-align: center; padding: 20px;" class="bg-light-primary">
+                                    <mat-icon>group</mat-icon>
+
+                                    <p style="font-weight: bold;">No team members match your selection</p>
+                                    <p>You can invite new team members, or edit existing ones.</p>
+                                    <button mat-raised-button color="primary">Clear filters</button>
+                                </div>
+                            </mat-tab>
+                        </mat-tab-group>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+
+        </div>
+    </mat-card-content>
+</mat-card>

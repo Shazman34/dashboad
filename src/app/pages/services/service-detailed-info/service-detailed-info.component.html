@@ -1,0 +1,48 @@
+<div class="row justify-content-center">
+    <div class="col-lg-8 text-center">
+      <mat-card-title class="d-block f-s-24 m-b-8"
+        >{{serviceInfo.name}}</mat-card-title
+      >
+      <div style="display: flex !important;">
+      <mat-icon class="back-arrow" (click)="goBack()">arrow_back</mat-icon>
+      <mat-card-subtitle class="mat-body-1 m-b-30 p-b-12 d-block f-s-16 m-t-2">
+        Back to Services
+      </mat-card-subtitle>
+    </div>
+      <mat-accordion>
+        <mat-expansion-panel class="cardWithShadow" *ngFor="let option of options">
+          <mat-expansion-panel-header>
+            <!-- <mat-panel-title class="f-w-600 mat-body-1">
+              What is an Admin Dashboard?
+            </mat-panel-title> -->
+            <mat-panel-title class="f-w-600 " >
+                <mat-icon>{{ option.icon }}</mat-icon>
+                
+                  <mat-panel-title  style="margin-left: 15px !important;">
+                    {{ option.title }}
+                  </mat-panel-title>
+                  <br>
+                  <mat-panel-description>
+                    {{ option.description }}
+                  </mat-panel-description>
+                  
+         
+             
+              </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p class="mat-body-1 text-left">
+            Admin Dashboard is the backend interface of a website or an
+            application that helps to manage the website's overall content and
+            settings. It is widely used by the site owners to keep track of their
+            website, make changes to their content, and more.
+          </p>
+        </mat-expansion-panel>
+
+      </mat-accordion>
+    </div>
+  
+  </div>
+  
+
+
+  

@@ -1,0 +1,34 @@
+.team-member-filters {
+    display: flex !important;
+    justify-content: space-between !important;
+    margin-bottom: 16px;
+  }
+  
+  .team-member-name {
+    font-weight: bold;
+  }
+  
+  .team-member-status {
+    margin-left: 8px;
+  }
+  
+  .team-member-email {
+    display: block;
+    color: gray;
+  }
+  
+  .m-r-10 {
+    margin-right: 10px;
+  }
+  
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  ::ng-deep .mat-card .mat-mdc-tab-header .mat-mdc-tab-labels .mat-mdc-tab-label.mat-mdc-tab-label-active {
+    background-color: #1976d2 !important; /* Change to your desired color */
+    color: white !important; /* Change the text color if necessary */
+  }
+  
+  ::ng-deep .mat-card .mat-mdc-tab-header .mat-mdc-tab-labels .mat-mdc-tab-label:hover {
+    color: #ff4081 !important; /* Change this to your desired hover color */
+  }
