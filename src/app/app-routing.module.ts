@@ -19,6 +19,7 @@ import { AppFullcalendarComponent } from './pages/fullcalendar/fullcalendar.comp
 import { CreateJobsComponent } from './pages/jobs/create-jobs/create-jobs.component';
 import { ServiceDetailedInfoComponent } from './pages/services/service-detailed-info/service-detailed-info.component';
 import { CreateCouponsComponent } from './pages/coupons/create-coupons/create-coupons.component';
+import { AccountComponent } from './pages/settings/setting-card-details/account/account.component';
 
 const routes: Routes = [
   {
@@ -128,6 +129,14 @@ const routes: Routes = [
         component: CreateCouponsComponent,
         data: {
           title: 'Coupons',
+        },
+        
+      },
+      {
+        path: 'setting-account',
+        component: AccountComponent,
+        data: {
+          title: 'Account',
         },
         
       }

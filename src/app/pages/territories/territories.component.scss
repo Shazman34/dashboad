@@ -1,0 +1,54 @@
+#map {
+    height: 500px;
+    width: 548px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.details {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.status {
+    color: green;
+    font-weight: bold;
+}
+
+.online-status {
+    color: green;
+    font-weight: bold;
+}
+
+.container {
+    padding: 20px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.service-area-toggle {
+    // display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f7f7f7;
+    // padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.territories {
+    // display: flex;
+    // gap: 20px;
+}
+
+button {
+    display: block;
+    margin-top: 20px;
+}

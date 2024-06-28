@@ -1,0 +1,44 @@
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .header-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .header-card {
+    width: 48%;
+    display: flex;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-content mat-icon {
+    // font-size: 40px;
+    margin-right: 10px;
+  }
+  
+  .settings-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns per row */
+    gap: 20px;
+  }
+
+  .header-card {
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, border 0.3s ease;
+    border: 1px solid transparent; /* Initially no border */
+  }
+  
+  .header-card:hover {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgb(3, 124, 255) !important;; /* Add blue border on hover */
+  }
+  

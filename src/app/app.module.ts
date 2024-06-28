@@ -53,6 +53,20 @@ import { ServiceDetailedInfoComponent } from './pages/services/service-detailed-
 import { SelectPaymentMethodComponent } from './pages/jobs/select-payment-method/select-payment-method.component';
 import { ReviewSummaryComponent } from './pages/jobs/review-summary/review-summary.component';
 import { CreateCouponsComponent } from './pages/coupons/create-coupons/create-coupons.component';
+import { SettingCardComponent } from './pages/settings/setting-card/setting-card.component';
+import { AccountComponent } from './pages/settings/setting-card-details/account/account.component';
+import { AvailabilityComponent } from './pages/settings/setting-card-details/availability/availability.component';
+import { BillingComponent } from './pages/settings/setting-card-details/billing/billing.component';
+import { BrandingComponent } from './layouts/full/vertical/sidebar/branding.component';
+import { BussinessDetailsComponent } from './pages/settings/setting-card-details/bussiness-details/bussiness-details.component';
+import { CalendarSyncingComponent } from './pages/settings/setting-card-details/calendar-syncing/calendar-syncing.component';
+import { ClientTeamNotificationComponent } from './pages/settings/setting-card-details/client-team-notification/client-team-notification.component';
+import { DevelopersComponent } from './pages/settings/setting-card-details/developers/developers.component';
+import { FieldAppComponent } from './pages/settings/setting-card-details/field-app/field-app.component';
+import { JobAssignmentComponent } from './pages/settings/setting-card-details/job-assignment/job-assignment.component';
+import { ReschedulingCancellationComponent } from './pages/settings/setting-card-details/rescheduling-cancellation/rescheduling-cancellation.component';
+import { SchedulingPoliciesComponent } from './pages/settings/setting-card-details/scheduling-policies/scheduling-policies.component';
+import { ServiceAreaComponent } from './pages/settings/setting-card-details/service-area/service-area.component';
 
 export function HttpLoaderFactory(http: HttpClient): any {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -85,7 +99,22 @@ export function HttpLoaderFactory(http: HttpClient): any {
     ServiceDetailedInfoComponent,
     SelectPaymentMethodComponent,
     ReviewSummaryComponent,
-    CreateCouponsComponent
+    CreateCouponsComponent,
+    SettingCardComponent,
+    AccountComponent,
+    AvailabilityComponent,
+    BillingComponent,
+    BussinessDetailsComponent,
+    CalendarSyncingComponent,
+    ClientTeamNotificationComponent,
+    DevelopersComponent,
+    FieldAppComponent,
+    JobAssignmentComponent,
+    PaymentsComponent,
+    ReschedulingCancellationComponent,
+    SchedulingPoliciesComponent,
+    ServiceAreaComponent
+
   ],
   imports: [
     BrowserModule,
@@ -93,6 +122,7 @@ export function HttpLoaderFactory(http: HttpClient): any {
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
+    
    
     MaterialModule,
     FormsModule,

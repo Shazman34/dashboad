@@ -1,0 +1,40 @@
+.account-details-card {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  .back-button {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-icon {
+    // font-size: 80px;
+    margin-right: 20px;
+  }
+  
+  .form-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .half-width {
+    width: 48%;
+  }
+  
+  .email-section, .password-section, .notification-preferences {
+    margin-bottom: 20px;
+  }
+  
