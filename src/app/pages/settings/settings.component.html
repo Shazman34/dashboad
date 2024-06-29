@@ -1,1 +1,29 @@
-<p>settings works!</p>
+<div class="row">
+
+    <div class="container col-lg-10">
+        <h1>Settings</h1>
+      
+        <div class="settings-grid">
+            <app-setting-card  title="waheed" description="Manage your Zenbooker user account" icon="account_circle" (mwlClick)="accountCard('account')"></app-setting-card>
+            <app-setting-card title="Billing" description="Manage your Zenbooker plan and billing information" icon="credit_card" (mwlClick)="accountCard('anm')"></app-setting-card>
+          <app-setting-card title="Business Details" description="View and update your business details" icon="business"></app-setting-card>
+          <app-setting-card title="Availability" description="Set hours of operation and add unexpected schedule changes" icon="schedule"></app-setting-card>
+          <app-setting-card title="Rescheduling & Cancellation" description="Allow your customers to reschedule and cancel online." icon="sync"></app-setting-card>
+          <app-setting-card title="Service Areas" description="Customize the geographic areas you service" icon="room"></app-setting-card>
+
+          <app-setting-card title="Branding" description="Customize your branding for emails, invoices, and your rescheduling page" icon="branding_watermark"></app-setting-card>
+          <app-setting-card title="Scheduling Policies" description="Set your cancellation policy and the frequency that services are available" icon="policy"></app-setting-card>
+          <app-setting-card title="Payments" description="Configure credit card capture when customers book online and enable tips" icon="payment"></app-setting-card>
+          <app-setting-card title="Client & Team Notifications" description="Edit the emails and text messages that are sent to clients and team members" icon="notifications"></app-setting-card>
+          <app-setting-card title="Feedback & Reviews" description="Collect feedback from customers and invite them to leave reviews" icon="feedback"></app-setting-card>
+          <app-setting-card title="Job Assignment" description="Configure job assignment and dispatch options for your service providers" icon="assignment"></app-setting-card>
+          <app-setting-card title="Calendar Syncing" description="Sync your Zenbooker schedule to external calendar apps." icon="sync_alt"></app-setting-card>
+          <app-setting-card title="Developers" description="Manage webhooks and API credentials" icon="code"></app-setting-card>
+          <app-setting-card title="Field App" description="Customize your mobile web app for service providers" icon="mobile_friendly"></app-setting-card>
+        </div>
+      </div>
+</div>
+
+
+
+  

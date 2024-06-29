@@ -1,0 +1,22 @@
+.settings-card {
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, border 0.3s ease;
+    border: 1px solid transparent; /* Initially no border */
+  }
+  
+  .settings-card:hover {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid  rgb(3, 124, 255) !important;; /* Add blue border on hover */
+  }
+  
+  .settings-card-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .settings-card-content mat-icon {
+    // font-size: 36px;
+//    color: rgb(3, 124, 255) !important;;
+    margin-right: 10px;
+  }
+  
