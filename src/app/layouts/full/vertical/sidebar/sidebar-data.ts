@@ -7,7 +7,7 @@ export const navItems: NavItem[] = [
   {
     displayName: 'Dashboard',
     iconName: 'home',
-    route: '/',
+    route: '/dashboard',
   },
   {
     navCap: 'Other',
@@ -46,80 +46,59 @@ export const navItems: NavItem[] = [
   {
     displayName: 'Schedule',
     iconName: 'calendar-event',
-    route: '/schedule',
+    route: 'dashboard/schedule',
     
   },
   {
     displayName: 'Jobs',
     iconName: 'briefcase',
-    route: '/jobs',
+    route: 'dashboard/jobs',
     
   }, {
     displayName: 'Recurring',
     iconName: 'recharging',
-    route: '/recurring',
+    route: 'dashboard/recurring',
     
   }, {
     displayName: 'Payments',
     iconName: 'cash',
-    route: '/payments',
+    route: 'dashboard/payments',
     
   }, {
     displayName: 'Customers',
     iconName: 'users',
-    route: '/customers',
+    route: 'dashboard/customers',
     
   }, {
     displayName: 'Team',
     iconName: 'users-group',
-    route: '/team',
+    route: 'dashboard/team',
     
   }, {
     displayName: 'Services',
     iconName: 'settings-star',
-    route: '/services',
+    route: 'dashboard/services',
     
   }, {
     displayName: 'Coupons',
     iconName: 'ticket',
-    route: '/coupons',
+    route: 'dashboard/coupons',
     
   }, {
     displayName: 'Territories',
     iconName: 'map-pin',
-    route: '/territories',
+    route: 'dashboard/territories',
     
   }, {
     displayName: 'Online Booking',
     iconName: 'brand-appgallery',
-    route: '/onlinebookings',
+    route: 'dashboard/onlinebookings',
     
   }, {
     displayName: 'Settings',
     iconName: 'settings',
-    route: '/settings',
+    route: 'dashboard/settings',
     
   },
-  // {
-  //   displayName: 'Chip',
-  //   iconName: 'mood-smile',
-  //   route: '/',
-  //   chip: true,
-  //   chipClass: 'bg-primary text-white',
-  //   chipContent: '9',
-  // },
-  // {
-  //   displayName: 'Outlined',
-  //   iconName: 'mood-smile',
-  //   route: '/',
-  //   chip: true,
-  //   chipClass: 'b-1 border-primary text-primary',
-  //   chipContent: 'outlined',
-  // },
-  // {
-  //   displayName: 'External Link',
-  //   iconName: 'star',
-  //   route: 'https://www.google.com/',
-  //   external: true,
-  // },
+ 
 ];
