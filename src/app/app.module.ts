@@ -53,6 +53,7 @@ import { ServiceDetailedInfoComponent } from './pages/services/service-detailed-
 import { SelectPaymentMethodComponent } from './pages/jobs/select-payment-method/select-payment-method.component';
 import { ReviewSummaryComponent } from './pages/jobs/review-summary/review-summary.component';
 import { CreateCouponsComponent } from './pages/coupons/create-coupons/create-coupons.component';
+import { AppLandingpageComponent } from './pages/landingpage/landingpage.component';
 
 export function HttpLoaderFactory(http: HttpClient): any {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -85,7 +86,8 @@ export function HttpLoaderFactory(http: HttpClient): any {
     ServiceDetailedInfoComponent,
     SelectPaymentMethodComponent,
     ReviewSummaryComponent,
-    CreateCouponsComponent
+    CreateCouponsComponent,
+    AppLandingpageComponent
   ],
   imports: [
     BrowserModule,

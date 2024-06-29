@@ -19,12 +19,22 @@ import { AppFullcalendarComponent } from './pages/fullcalendar/fullcalendar.comp
 import { CreateJobsComponent } from './pages/jobs/create-jobs/create-jobs.component';
 import { ServiceDetailedInfoComponent } from './pages/services/service-detailed-info/service-detailed-info.component';
 import { CreateCouponsComponent } from './pages/coupons/create-coupons/create-coupons.component';
+import { AppLandingpageComponent } from './pages/landingpage/landingpage.component';
 
 const routes: Routes = [
+    {
+      path: '',
+      component: AppLandingpageComponent,
+      data: {
+        title: 'HomePage',
+      },
+    },
+  
   {
-    path: '',
+    path: 'dashboard',
     component: FullComponent,
     children: [
+      
       {
         path: '',
         component: StarterComponent,
@@ -32,6 +42,7 @@ const routes: Routes = [
           title: 'Dashboard',
         },
       },
+     
       {
         path: 'recurring',
         component: RecurringComponent,
