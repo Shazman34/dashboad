@@ -68,6 +68,7 @@ import { JobAssignmentComponent } from './pages/settings/setting-card-details/jo
 import { ReschedulingCancellationComponent } from './pages/settings/setting-card-details/rescheduling-cancellation/rescheduling-cancellation.component';
 import { SchedulingPoliciesComponent } from './pages/settings/setting-card-details/scheduling-policies/scheduling-policies.component';
 import { ServiceAreaComponent } from './pages/settings/setting-card-details/service-area/service-area.component';
+import { PricingComponent } from './pages/landingpage/pricing/pricing.component';
 
 export function HttpLoaderFactory(http: HttpClient): any {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -115,7 +116,8 @@ export function HttpLoaderFactory(http: HttpClient): any {
     PaymentsComponent,
     ReschedulingCancellationComponent,
     SchedulingPoliciesComponent,
-    ServiceAreaComponent
+    ServiceAreaComponent,
+    PricingComponent
 
   ],
   imports: [

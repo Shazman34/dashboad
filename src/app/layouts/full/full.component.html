@@ -128,7 +128,7 @@
     <!-- ============================================================== -->
     <!-- VerticalHeader -->
     <!-- ============================================================== -->
-    <ng-container *ngIf="!options.horizontal; else horizontalheader">
+    <ng-container >
       <app-header
         [showToggle]="!isOver"
         (toggleCollapsed)="toggleCollapsed()"
@@ -138,14 +138,14 @@
     </ng-container>
 
     <!-- horizontal header -->
-    <ng-template #horizontalheader>
+    <!-- <ng-template #horizontalheader>
       <app-horizontal-header
         (toggleMobileNav)="sidenav.toggle()"
         (toggleMobileFilterNav)="filterNavRight.toggle()"
       ></app-horizontal-header>
-    </ng-template>
+    </ng-template> -->
 
-    <app-horizontal-sidebar *ngIf="options.horizontal"></app-horizontal-sidebar>
+    <!-- <app-horizontal-sidebar *ngIf="options.horizontal"></app-horizontal-sidebar> -->
 
     <main
       class="pageWrapper"

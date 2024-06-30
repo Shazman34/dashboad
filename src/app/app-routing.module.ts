@@ -21,6 +21,7 @@ import { ServiceDetailedInfoComponent } from './pages/services/service-detailed-
 import { CreateCouponsComponent } from './pages/coupons/create-coupons/create-coupons.component';
 import { AppLandingpageComponent } from './pages/landingpage/landingpage.component';
 import { AccountComponent } from './pages/settings/setting-card-details/account/account.component';
+import { PricingComponent } from './pages/landingpage/pricing/pricing.component';
 
 const routes: Routes = [
     {
@@ -29,6 +30,15 @@ const routes: Routes = [
       data: {
         title: 'HomePage',
       },
+      // children:[
+      //   {
+      //     path: 'pricing',
+      //     component: PricingComponent,
+      //     data: {
+      //       title: 'Pricing',
+      //     },
+      //   }
+      // ]
     },
   
   {
@@ -43,7 +53,13 @@ const routes: Routes = [
           title: 'Dashboard',
         },
       },
-     
+      {
+            path: 'pricing',
+            component: PricingComponent,
+            data: {
+              title: 'Pricing',
+            },
+          },
       {
         path: 'recurring',
         component: RecurringComponent,

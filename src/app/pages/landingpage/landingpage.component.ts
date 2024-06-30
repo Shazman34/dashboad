@@ -1,6 +1,7 @@
 import { Component, Output, EventEmitter, Input } from '@angular/core';
 import { CoreService } from 'src/app/services/core.service';
 import { ViewportScroller } from '@angular/common';
+import { PricingComponent } from './pricing/pricing.component';
 
 interface apps {
   id: number;
