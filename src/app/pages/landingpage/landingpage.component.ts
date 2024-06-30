@@ -35,12 +35,12 @@ interface features {
   id: number;
   icon: string;
   title: string;
-  subtext: string;
 }
 
 @Component({
   selector: 'app-landingpage',
   templateUrl: './landingpage.component.html',
+  styleUrls: ['./landingpage.component.scss']
 })
 export class AppLandingpageComponent {
   @Input() showToggle = true;
@@ -59,7 +59,9 @@ export class AppLandingpageComponent {
   gotoDemos() {
     this.scroller.scrollToAnchor('demos');
   }
-
+  gotoPricing(){
+    this.scroller.scrollToAnchor('pricing');
+  }
   apps: apps[] = [
     {
       id: 1,
@@ -230,91 +232,100 @@ export class AppLandingpageComponent {
   features: features[] = [
     {
       id: 1,
-      icon: 'wand',
-      title: '6 Theme Colors',
-      subtext:
-        'We have included 6 pre-defined Theme Colors with Elegant Admin.',
+      icon: 'archive',
+      title: 'Alarm Installation',
+      // subtext:
+      //   'We have included 6 pre-defined Theme Colors with Elegant Admin.',
     },
     {
       id: 2,
-      icon: 'shield-lock',
-      title: 'Authguard',
-      subtext:
-        'AuthGuard is used to protect the routes from unauthorized access in angular..',
+      icon: 'archive',
+      title: 'Lawn Care',
+     
     },
     {
       id: 3,
       icon: 'archive',
-      title: '80+ Page Templates',
-      subtext: 'Yes, we have 6 demos & 80+ Pages per demo to make it easier.',
+      title: 'Carpet Cleaning',
+    
     },
     {
       id: 4,
-      icon: 'adjustments',
-      title: '50+ UI Components',
-      subtext:
-        'Almost 50+ UI Components being given with Modernize Admin Pack.',
+      icon: 'archive',
+      title: 'Garage Door Repair',
+     
     },
     {
       id: 5,
-      icon: 'tag',
-      title: 'Material ',
-      subtext: 'Its been made with Material and full responsive layout.',
+      icon: 'archive',
+      title: 'Mobile Auto Detailing',
+     
     },
     {
       id: 6,
-      icon: 'diamond',
-      title: '3400+ Font Icons',
-      subtext:
-        'Lots of Icon Fonts are included here in the package of Elegant Admin.',
+      icon: 'archive',
+      title: 'TV Mounting',
+     
     },
     {
       id: 7,
-      icon: 'language-katakana',
-      title: 'i18 Angular',
-      subtext: 'i18 is a powerful internationalization framework for React.',
+      icon: 'archive',
+      title: 'Pressure Washing',
+     
     },
     {
-      id: 8,
-      icon: 'arrows-shuffle',
-      title: 'Easy to Customize',
-      subtext: 'Customization will be easy as we understand your pain.',
+      id: 5,
+      icon: 'archive',
+      title: 'Handyman Services',
+     
     },
     {
-      id: 9,
-      icon: 'chart-pie',
-      title: 'Lots of Chart Options',
-      subtext: 'You name it and we have it, Yes lots of variations for Charts.',
+      id: 5,
+      icon: 'archive',
+      title: 'Pool Services',
+     
     },
     {
-      id: 10,
-      icon: 'layers-intersect',
-      title: 'Lots of Table Examples',
-      subtext: 'Data Tables are initial requirement and we added them.',
+      id: 5,
+      icon: 'archive',
+      title: 'Mobile Phone Repair',
+     
     },
     {
-      id: 11,
-      icon: 'refresh',
-      title: 'Regular Updates',
-      subtext: 'We are constantly updating our pack with new features..',
+      id: 5,
+      icon: 'archive',
+      title: 'Locksmiths',
+     
     },
     {
-      id: 12,
-      icon: 'book',
-      title: 'Detailed Documentation',
-      subtext: 'We have made detailed documentation, so it will easy to use.',
+      id: 5,
+      icon: 'archive',
+      title: 'Pest Control',
+     
     },
     {
-      id: 13,
-      icon: 'calendar',
-      title: 'Calendar Design',
-      subtext: 'Calendar is available with our package & in nice design.',
+      id: 5,
+      icon: 'archive',
+      title: 'Appliance Repair',
+     
     },
     {
-      id: 14,
-      icon: 'messages',
-      title: 'Dedicated Support',
-      subtext: 'We believe in supreme support is key and we offer that.',
+      id: 5,
+      icon: 'archive',
+      title: 'Junk Removal',
+     
+    },
+    {
+      id: 5,
+      icon: 'archive',
+      title: 'Mobile Pet Service',
+     
+    },
+    {
+      id: 5,
+      icon: 'archive',
+      title: 'Painting',
+     
     },
   ];
 

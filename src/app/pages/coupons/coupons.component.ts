@@ -33,7 +33,7 @@ export class CouponsComponent implements OnInit {
   }
   addCoupons(){
   // this.router.navigate(['service-info'],{ queryParams: serviceDetails });
-  this.router.navigate(['create-coupons']);
+  this.router.navigate(['dashboard/create-coupons']);
 
 
   }

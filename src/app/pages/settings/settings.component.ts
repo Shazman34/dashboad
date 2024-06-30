@@ -15,7 +15,7 @@ export class SettingsComponent {
   accountCard(screen:any){
 
 
-    this.router.navigate(['/setting-account'])
+    this.router.navigate(['dashboard/setting-account'])
 // debugger
 //     console.log("account details--->",screen)
 //     const dialogRef = this.dialog.open(AccountComponent, {
